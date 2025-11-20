@@ -15,7 +15,7 @@ transform = Transform3D(1, 0, 0, 0, 0.020307899, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_secbc")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
-transform = Transform3D(0.41391462, 0, 0, 0, 0.013413448, 0, 0, 0, 0.660504, 0.101825446, 0.15772754, -0.093636006)
+transform = Transform3D(0.34175494, -0.0075673345, 0, 0.23351422, 0.01107502, 0, 0, 0, 0.66050404, 0.06501642, 0.28213242, -0.0794708)
 mesh = SubResource("BoxMesh_secbc")
 
 [node name="Node3D" type="Node3D" parent="."]
