@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://yfd1o381ts64"]
+[gd_scene load_steps=3 format=3 uid="uid://yfd1o381ts64"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_secbc"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6v8b3"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -9,15 +11,31 @@
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
-transform = Transform3D(4.413931, 0, 0, 0, 0.15527496, 0, 0, 0, 3.7576106, -0.014692195, 0.15325797, -0.06899929)
+transform = Transform3D(1, 0, 0, 0, 0.020307899, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_secbc")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
-transform = Transform3D(-0.0017644837, -0.036526304, 0, 0.32930332, -0.00019571604, 0, 0, 0, 0.48447326, -0.13216925, 0.39750087, -0.17153978)
+transform = Transform3D(0.41391462, 0, 0, 0, 0.013413448, 0, 0, 0, 0.660504, 0.101825446, 0.15772754, -0.093636006)
 mesh = SubResource("BoxMesh_secbc")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+[node name="Node3D" type="Node3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D"]
+[node name="Sprite3D" type="Sprite3D" parent="Node3D/CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/CharacterBody3D/Sprite3D"]
+transform = Transform3D(0.020636441, 0, 0, 0, 0.0719384, 0, 0, 0, 0.023668302, -0.052628726, 0.08652049, -0.31149483)
+mesh = SubResource("CylinderMesh_6v8b3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D/CharacterBody3D/Sprite3D"]
+transform = Transform3D(0.020636441, 0, 0, 0, 0.0719384, 0, 0, 0, 0.023668302, -0.052628726, 0.08652049, 0.086746484)
+mesh = SubResource("CylinderMesh_6v8b3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D/CharacterBody3D/Sprite3D"]
+transform = Transform3D(0.020636441, 0, 0, 0, 0.0719384, 0, 0, 0, 0.023668302, 0.2279853, 0.08652049, 0.086746484)
+mesh = SubResource("CylinderMesh_6v8b3")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D/CharacterBody3D/Sprite3D"]
+transform = Transform3D(0.020636441, 0, 0, 0, 0.0719384, 0, 0, 0, 0.023668302, 0.2279853, 0.08652049, -0.30736256)
+mesh = SubResource("CylinderMesh_6v8b3")
